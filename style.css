@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clifford: #da373d;
+  --color-black: #0b0a2f;
+  --color-gray: #91909e;
+  --color-blue: #4232f9;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.button-style {
+  @apply before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 overflow-hidden before:w-0 hover:before:w-full hover:font-semibold before:-z-10 before:transition-all before:duration-400 transition-all relative cursor-pointer py-2.5 px-4 md:py-3.5 md:px-8 lg:py-4.5 lg:px-7.5 rounded-full flex gap-1.5 lg:gap-2.5 items-center text-sm lg:text-base;
+}
+
+.text-12 {
+  @apply text-[10px] md:text-xs;
+}
+
+.text-14 {
+  @apply text-xs md:text-sm;
+}
+
+.text-16 {
+  @apply text-sm md:text-base;
+}
+
+.text-18 {
+  @apply text-[14px] md:text-[18px];
+}
+
+.text-20 {
+  @apply text-lg md:text-xl;
+}
+
+.text-24 {
+  @apply text-xl md:text-2xl;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.marquee {
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-reverse {
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee-reverse 10s linear infinite;
+}
