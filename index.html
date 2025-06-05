@@ -28,17 +28,17 @@
       </nav>
 
       <section
-        class="lg:bg-[url(/images/hero-bg.png)] flex gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center relative bg-contain bg-no-repeat bg-center p-5 py-20 pt-22 md:h-[800px] lg:h-[687px]"
+        class="lg:bg-[url(/images/hero-bg.png)] lg:relative flex gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center relative bg-contain bg-no-repeat bg-center p-5 py-20 pt-22 min-h-dvh md:h-[800px] lg:h-[100%]"
       >
         <img
           src="/images/ec-left.png"
           alt=""
-          class="absolute left-0 top-0 -z-10"
+          class="absolute left-0 top-0 -z-10 lg:hidden"
         />
         <img
           src="/images/ec-right.png"
           alt=""
-          class="absolute right-0 bottom-0 -z-10"
+          class="absolute right-0 bottom-0 -z-10 lg:hidden"
         />
         <div
           class="flex gap-1.5 items-center bg-[#F6F5FF] rounded-full py-2 px-4"
@@ -118,11 +118,18 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-2 overflow-hidden box-border w-full">
-          <div class="box-border w-full overflow-hidden">
-            <div class="flex items-center gap-4 marquee py-1">
+        <div
+          class="flex flex-col gap-2 overflow-hidden box-border w-full xl:w-fit"
+        >
+          <div
+            class="box-border w-full xl:w-fit overflow-hidden xl:absolute xl:top-1/2 xl:-translate-y-1/2 xl:left-0"
+          >
+            <div
+              class="flex items-center gap-4 xl:!animate-none py-1"
+              id="marquee"
+            >
               <div class="flex gap-4">
-                <div class="flex gap-4">
+                <div class="flex gap-4 xl:flex-col xl:gap-[50px]">
                   <div
                     class="flex shrink-0 flex-1 w-full justify-between gap-6 items-center py-3 px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow shadow-[rgba(11, 10, 47, 0.10)]"
                   >
@@ -183,7 +190,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex gap-4">
+              <!-- <div class="flex gap-4 xl:hidden">
                 <div class="flex gap-4">
                   <div
                     class="flex shrink-0 flex-1 w-full justify-between gap-6 items-center py-3 px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow shadow-[rgba(11, 10, 47, 0.10)]"
@@ -244,14 +251,18 @@
                     <p class="text-16 font-bold text-black">$582</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
-          <div class="box-border w-full overflow-hidden">
-            <div class="flex items-center gap-4 marquee-reverse py-1">
+          <div
+            class="box-border w-full xl:w-fit overflow-hidden xl:absolute xl:top-1/2 xl:-translate-y-1/2 xl:right-0"
+          >
+            <div
+              class="flex items-center gap-4 marquee-reverse xl:!animate-none py-1"
+            >
               <div class="flex gap-4">
-                <div class="flex gap-4">
+                <div class="flex gap-4 xl:flex-col">
                   <div
                     class="py-3 shrink-0 w-fit px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow shadow-[rgba(11, 10, 47, 0.10)]"
                   >
@@ -301,7 +312,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex gap-4">
+              <div class="flex gap-4 xl:hidden">
                 <div class="flex gap-4">
                   <div
                     class="py-3 shrink-0 w-fit px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow shadow-[rgba(11, 10, 47, 0.10)]"
@@ -357,5 +368,7 @@
         </div>
       </section>
     </main>
+
+    <script type="module" src="/script.js"></script>
   </body>
 </html>
