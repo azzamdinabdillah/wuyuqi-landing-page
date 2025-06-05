@@ -1,5 +1,17 @@
-import marquee from "https://cdn.jsdelivr.net/npm/vanilla-marquee/dist/vanilla-marquee.js";
+import InfiniteMarquee from "vanilla-infinite-marquee";
 
-new marquee(document.getElementById("marquee"), {
-  duplicated: true,
+new InfiniteMarquee({
+  element: ".marquee-container",
+  speed: 25000,
+  smoothEdges: true,
+  direction: "right",
+  duplicateCount: 1,
+});
+
+new InfiniteMarquee({
+  element: ".marquee-container-2",
+  speed: 20000,
+  smoothEdges: true,
+  direction: "left",
+  duplicateCount: 0,
 });

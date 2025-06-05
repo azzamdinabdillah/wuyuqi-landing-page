@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
-    "dynamic-marquee": "^2.6.5",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "vanilla-infinite-marquee": "^1.0.13"
   }
 }
