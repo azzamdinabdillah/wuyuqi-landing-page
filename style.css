@@ -13,7 +13,7 @@
 }
 
 .button-style {
-  @apply before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 overflow-hidden before:w-0 hover:before:w-full hover:font-semibold before:-z-10 before:transition-all before:duration-400 transition-all relative cursor-pointer py-2.5 px-4 md:py-3.5 md:px-8 lg:py-4.5 lg:px-7.5 rounded-full flex gap-1.5 lg:gap-2.5 items-center text-sm lg:text-base;
+  @apply before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 overflow-hidden before:w-0 hover:before:w-full before:-z-10 before:transition-all before:duration-400 transition-all relative cursor-pointer py-2.5 px-4 md:py-3.5 md:px-8 lg:py-4.5 lg:px-7.5 rounded-full flex gap-1.5 lg:gap-2.5 items-center text-sm lg:text-base;
 }
 
 .text-12 {
@@ -40,10 +40,80 @@
   @apply text-xl md:text-2xl;
 }
 
+/* MARQUEE CUSTOM STYLE */
 .horizontal-marquee {
   mask: none !important;
 }
 
 .horizontal-marquee-inner {
   gap: 16px;
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes floating-animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translate(5px, -10px) rotate(2deg) scale(1.05);
+  }
+  40% {
+    transform: translate(-5px, 4px) rotate(-1deg) scale(0.98);
+  }
+  60% {
+    transform: translate(5px, -5px) rotate(1deg) scale(1.03);
+  }
+  80% {
+    transform: translate(-8px, 8px) rotate(-2deg) scale(0.99);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.floating-animation {
+  animation: floating-animation 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.floating-animation.reverse {
+  animation-direction: reverse;
+}
+
+/* JIGGLE ANIMATION */
+@keyframes jiggle-animation {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-9px);
+  }
+  35% {
+    transform: translateY(-9px) rotate(17deg);
+  }
+  55% {
+    transform: translateY(-9px) rotate(-17deg);
+  }
+  65% {
+    transform: translateY(-9px) rotate(17deg);
+  }
+  75% {
+    transform: translateY(-9px) rotate(-17deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.jiggle-animation {
+  display: inline-block;
+  animation: jiggle-animation 1.5s ease-in-out infinite;
+}
+
+/* CURSOR TYPEWRITTER ANIMATION */
+
+.ti-cursor {
+  margin-left: 10px;
 }

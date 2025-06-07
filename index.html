@@ -31,7 +31,7 @@
         class="bg-cover bg-no-repeat bg-center lg:bg-[url(/images/hero-bg.png)] z-20"
       >
         <div
-          class="flex z-20 relative mx-auto gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center p-5 py-20 pt-22 min-h-dvh md:h-[800px] xl:max-h-[687px] xl:min-h-0 xl:py-0 xl:pt-7.5 xl:max-w-[1000px]"
+          class="flex z-20 relative mx-auto gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center p-5 py-20 pt-22 min-h-dvh md:min-h-fit xl:min-h-[800px] xl:py-0 xl:pt-7.5 xl:max-w-[1000px]"
         >
           <img
             src="/images/ec-left.png"
@@ -43,16 +43,24 @@
             alt=""
             class="absolute right-0 bottom-0 -z-10 lg:hidden"
           />
+
+          <!-- ACHIEVEMENT   -->
           <div
             class="flex gap-1.5 items-center bg-[#F6F5FF] rounded-full py-2 px-4"
           >
-            <img src="/icons/cup.svg" alt="" />
+            <div class="jiggle-animation inline-block">
+              <img class="" src="/icons/cup.svg" alt="" />
+              <!-- sdasda -->
+            </div>
             <p class="text-xs text-blue font-bold">
               TOP 500 MILLION STARTUPS EVER
             </p>
           </div>
+
+          <!-- MAIN TEXT -->
           <div class="flex gap-3.5 flex-col h-fit max-w-[650px] md:w-full">
             <h1
+              id="typewriter"
               class="text-[40px] text-black lg:text-[70px] font-bold leading-[130%] md:text-[60px] md:text-center"
             >
               Your Big Business Starts With Us
@@ -61,13 +69,16 @@
             <p
               class="text-base md:text-lg text-gray leading-[177%] md:text-center"
             >
-              Lorem dolor si amet great system built for entrepreneur
-              pardon zenme yang shangye hao gongzuo without break down
+              Empowering your vision through tailored systems for business
+              leaders trusted solutions that support sustainable growth without
+              disruption
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-3.5">
+
+          <!-- BUTTON CTA -->
+          <div class="grid grid-cols-2 gap-3.5 items-center">
             <button
-              class="border border-black text-black before:bg-blue hover:text-white hover:border-blue button-style group"
+              class="ring ring-black text-black before:bg-blue hover:text-white hover:ring-blue button-style group"
             >
               <!-- <img src="/icons/play-circle.svg" alt="" class="lg:w-6 w-5" /> -->
               <svg
@@ -92,7 +103,7 @@
               <p>Watch Demo</p>
             </button>
             <button
-              class="bg-blue text-white before:bg-white hover:bg-transparent hover:text-black button-style"
+              class="ring ring-transparent bg-blue text-white before:bg-black hover:ring hover:ring-black hover:bg-transparent hover:text-white button-style"
             >
               Try Free Trial Now
             </button>
@@ -122,9 +133,9 @@
             </p>
           </div>
 
-          <!-- MARQUEE ELEMENT STAT MOBILE-LAPTOP -->
+          <!-- MARQUEE ELEMENT TESTTIMONIAL MOBILE-LAPTOP -->
           <div
-            class="flex flex-col gap-3 overflow-hidden box-border w-full xl:w-fit xl:hidden"
+            class="marquee-fadein flex flex-col gap-3 overflow-hidden box-border w-full xl:w-fit xl:hidden"
           >
             <div
               class="flex !gap-4 xl:flex-col xl:gap-[50px] marquee-container pb-1"
@@ -234,12 +245,12 @@
             </div>
           </div>
 
-          <!-- FLOATING ELEMENT STAT DESKTOP -->
+          <!-- FLOATING ELEMENT TESTIMONIAL DESKTOP LEFT -->
           <div
             class="hidden xl:flex gap-[30px] flex-col absolute left-0 top-1/2 -translate-y-1/2"
           >
             <div
-              class="flex justify-between w-max gap-6 items-center py-4.5 px-3.5 rounded-2xl bg-white shadow xl:shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-x-[20%] -translate-y-[50%]"
+              class="floating-animation flex justify-between w-max gap-6 items-center py-4.5 px-3.5 rounded-2xl bg-white shadow xl:shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-x-[20%] -translate-y-[50%]"
             >
               <div class="flex gap-2 lg:gap-3 items-center">
                 <img
@@ -257,7 +268,7 @@
             </div>
 
             <div
-              class="flex justify-between w-max gap-6 items-center py-3 px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow xl:shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-x-[30%] -translate-y-[40%]"
+              class="floating-animation flex justify-between w-max gap-6 items-center py-3 px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow xl:shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-x-[30%] -translate-y-[40%]"
             >
               <div class="flex gap-2 lg:gap-3 items-center">
                 <img
@@ -275,7 +286,7 @@
             </div>
 
             <div
-              class="flex justify-between w-max gap-6 items-center py-3 px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow xl:shadow-xl shadow-[rgba(11, 10, 47, 0.10)]"
+              class="floating-animation flex justify-between w-max gap-6 items-center py-3 px-3.5 lg:py-4.5 lg:px-3.5 rounded-2xl bg-white shadow xl:shadow-xl shadow-[rgba(11, 10, 47, 0.10)]"
             >
               <div class="flex gap-2 lg:gap-3 items-center">
                 <img
@@ -293,11 +304,12 @@
             </div>
           </div>
 
+          <!-- FLOATING ELEMENT TESTIMONIAL DESKTOP RIGHT -->
           <div
             class="hidden xl:flex gap-[50px] flex-col absolute right-[4%] top-1/2 -translate-y-1/2"
           >
             <div
-              class="py-4.5 pr-10 w-max px-3.5 rounded-2xl bg-white shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-y-[100%]"
+              class="floating-animation reverse py-4.5 pr-10 w-max px-3.5 rounded-2xl bg-white shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-y-[100%]"
             >
               <div class="flex gap-2 lg:gap-3 items-center">
                 <img
@@ -313,7 +325,7 @@
             </div>
 
             <div
-              class="py-4.5 pr-10 w-max px-3.5 rounded-2xl bg-white shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-y-[50%] translate-x-[50%]"
+              class="floating-animation reverse py-4.5 pr-10 w-max px-3.5 rounded-2xl bg-white shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-y-[50%] translate-x-[50%]"
             >
               <div class="flex gap-2 lg:gap-3 items-center">
                 <img
@@ -329,7 +341,7 @@
             </div>
 
             <div
-              class="py-4.5 pr-10 w-max px-3.5 rounded-2xl bg-white shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-y-[20%]"
+              class="floating-animation reverse py-4.5 pr-10 w-max px-3.5 rounded-2xl bg-white shadow-xl shadow-[rgba(11, 10, 47, 0.10)] -translate-y-[20%]"
             >
               <div class="flex gap-2 lg:gap-3 items-center">
                 <img
