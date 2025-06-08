@@ -54,4 +54,32 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
   }).go();
+
+  document.querySelector(".toggle-navbar").addEventListener("click", () => {
+    document.querySelector(".navbar-mobile").classList.toggle("show");
+
+    // ANIMATION OPEN/CLOSE SIDEBAR MOBILE VERSION
+    gsap
+      .timeline({
+        defaults: {
+          duration: 0.5,
+        },
+      })
+      .set(".navbar-mobile .menu", {
+        width: 0,
+      })
+      .fromTo(
+        ".navbar-mobile",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        }
+      )
+      .to(".navbar-mobile .menu", {
+        width: "70vw",
+        duration: 0.3,
+      });
+  });
 });

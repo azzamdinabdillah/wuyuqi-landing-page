@@ -18,24 +18,47 @@
   <body>
     <main class="">
       <nav
-        class="py-3 px-4 fixed top-0 left-0 right-0 z-50 flex justify-between items-center"
+        class="py-3 px-4 fixed top-0 left-0 right-0 z-50 flex justify-between items-center max-w-[1130px] mx-auto lg:py-8 lg:px-10 xl:px-0"
       >
         <div class="flex gap-2 items-center">
           <img src="/icons/logo.png" alt="" class="w-10 lg:w-12.5" />
           <p class="text-black text-xl lg:text-2xl font-bold">Wuyuqi</p>
         </div>
-        <img src="/icons/menu.png" alt="" class="w-8" />
+        <img src="/icons/menu.png" alt="" class="w-8 toggle-navbar lg:hidden" />
 
         <div
-          class="navbar-mobile lg:hidden fixed w-[70vw] bg-white h-[calc(100dvh-64px)] bottom-0 left-0 right-0 ml-auto"
+          class="flex-row items-center text-16 text-black gap-10 hidden lg:flex"
         >
-          <div class="flex flex-col">
-            <a href="">Home</a>
-            <a href="">Features</a>
-            <a href="">Pricing</a>
-            <a href="">Showcase</a>
+          <a href="" class="nav-link">Home</a>
+          <a href="" class="nav-link">Features</a>
+          <a href="" class="nav-link">Pricing</a>
+          <a href="" class="nav-link">Showcase</a>
 
-            <button>My Account</button>
+          <button
+            class="before:bg-blue bg-[#0B0A2F] text-white hover:text-white w-fit hover:bg-transparent button-style !py-3 !px-5"
+          >
+            My Account
+          </button>
+        </div>
+
+        <div
+          class="navbar-mobile hidden lg:hidden fixed bg-black/50 left-0 right-0 bottom-0 h-[calc(100dvh-64px)]"
+        >
+          <div
+            class="w-[70vw] menu bg-white bottom-0 left-0 right-0 ml-auto h-full"
+          >
+            <div class="flex flex-col text-16 text-black gap-5 p-5 font-medium">
+              <a href="" class="nav-link w-fit">Home</a>
+              <a href="" class="nav-link w-fit">Features</a>
+              <a href="" class="nav-link w-fit">Pricing</a>
+              <a href="" class="nav-link w-fit">Showcase</a>
+
+              <button
+                class="before:bg-blue bg-[#0B0A2F] text-white hover:text-black w-fit hover:bg-transparent button-style"
+              >
+                My Account
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -44,7 +67,7 @@
         class="bg-cover bg-no-repeat bg-center lg:bg-[url(/images/hero-bg.png)] z-20"
       >
         <div
-          class="flex z-20 relative mx-auto gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center p-5 py-20 pt-22 min-h-dvh md:min-h-fit xl:min-h-[800px] xl:py-0 xl:pt-7.5 xl:max-w-[1000px]"
+          class="flex z-20 relative mx-auto gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center p-5 py-20 pt-22 md:pt-28 lg:pt-[200px] min-h-dvh md:min-h-fit xl:max-w-[1000px]"
         >
           <img
             src="/images/ec-left.png"
@@ -91,9 +114,8 @@
           <!-- BUTTON CTA -->
           <div class="grid grid-cols-2 gap-3.5 items-center">
             <button
-              class="ring ring-black text-black before:bg-blue hover:text-white hover:ring-blue button-style group"
+              class="ring ring-black text-black before:bg-blue hover:text-white hover:ring-transparent button-style group"
             >
-              <!-- <img src="/icons/play-circle.svg" alt="" class="lg:w-6 w-5" /> -->
               <svg
                 class="lg:w-6 w-5 group-hover:stroke-white stroke-black stoke-1.5 group-hover:stroke-2"
                 viewBox="0 0 25 24"
@@ -116,7 +138,7 @@
               <p>Watch Demo</p>
             </button>
             <button
-              class="ring ring-transparent bg-blue text-white before:bg-black hover:ring hover:ring-black hover:bg-transparent hover:text-white button-style"
+              class="ring ring-transparent bg-blue text-white before:bg-black hover:ring hover:bg-transparent hover:text-white button-style"
             >
               Try Free Trial Now
             </button>
