@@ -18,66 +18,77 @@
   <body>
     <main class="">
       <nav
-        class="py-3 px-4 fixed top-0 left-0 right-0 z-50 flex justify-between items-center max-w-[1130px] mx-auto lg:py-8 lg:px-10 xl:px-0"
+        class="transition-all py-3 px-4 fixed top-0 left-0 right-0 z-50 mx-auto md:py-5 md:px-8 lg:py-8 lg:px-10 xl:px-0"
       >
-        <div class="flex gap-2 items-center">
-          <img src="/icons/logo.png" alt="" class="w-10 lg:w-12.5" />
-          <p class="text-black text-xl lg:text-2xl font-bold">Wuyuqi</p>
-        </div>
-        <img src="/icons/menu.png" alt="" class="w-8 toggle-navbar lg:hidden" />
-
         <div
-          class="flex-row items-center text-16 text-black gap-10 hidden lg:flex"
+          class="lg:max-w-[1130px] flex justify-between items-center mx-auto"
         >
-          <a href="" class="nav-link">Home</a>
-          <a href="" class="nav-link">Features</a>
-          <a href="" class="nav-link">Pricing</a>
-          <a href="" class="nav-link">Showcase</a>
+          <div class="flex gap-2 items-center">
+            <img src="/icons/logo.png" alt="" class="w-10 lg:w-12.5" />
+            <p class="text-black text-xl lg:text-2xl font-bold">Wuyuqi</p>
+          </div>
+          <img
+            src="/icons/menu.png"
+            alt=""
+            class="w-8 toggle-navbar lg:hidden"
+          />
 
-          <button
-            class="before:bg-blue bg-[#0B0A2F] text-white hover:text-white w-fit hover:bg-transparent button-style !py-3 !px-5"
-          >
-            My Account
-          </button>
-        </div>
-
-        <div
-          class="navbar-mobile hidden lg:hidden fixed bg-black/50 left-0 right-0 bottom-0 h-[calc(100dvh-64px)]"
-        >
           <div
-            class="w-[70vw] menu bg-white bottom-0 left-0 right-0 ml-auto h-full"
+            class="flex-row nav-container items-center text-16 text-black gap-10 hidden lg:flex"
           >
-            <div class="flex flex-col text-16 text-black gap-5 p-5 font-medium">
-              <a href="" class="nav-link w-fit">Home</a>
-              <a href="" class="nav-link w-fit">Features</a>
-              <a href="" class="nav-link w-fit">Pricing</a>
-              <a href="" class="nav-link w-fit">Showcase</a>
+            <a href="" class="nav-link">Home</a>
+            <a href="" class="nav-link">Features</a>
+            <a href="" class="nav-link">Pricing</a>
+            <a href="" class="nav-link">Showcase</a>
 
-              <button
-                class="before:bg-blue bg-[#0B0A2F] text-white hover:text-black w-fit hover:bg-transparent button-style"
+            <button
+              class="before:bg-blue bg-[#0B0A2F] text-white hover:text-white w-fit hover:bg-transparent button-style !py-3 !px-5"
+            >
+              My Account
+            </button>
+          </div>
+
+          <div
+            class="navbar-mobile hidden lg:hidden fixed bg-black/50 left-0 right-0 bottom-0 h-[calc(100dvh-64px)]"
+          >
+            <div
+              class="w-[70vw] menu bg-white bottom-0 left-0 right-0 ml-auto h-full"
+            >
+              <div
+                class="flex flex-col text-16 text-black gap-5 p-5 font-medium"
               >
-                My Account
-              </button>
+                <a href="" class="nav-link w-fit">Home</a>
+                <a href="" class="nav-link w-fit">Features</a>
+                <a href="" class="nav-link w-fit">Pricing</a>
+                <a href="" class="nav-link w-fit">Showcase</a>
+
+                <button
+                  class="before:bg-blue bg-[#0B0A2F] text-white hover:text-black w-fit hover:bg-transparent button-style"
+                >
+                  My Account
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </nav>
 
+      <!-- HERO SECTION -->
       <section
-        class="bg-cover bg-no-repeat bg-center lg:bg-[url(/images/hero-bg.png)] z-20"
+        class="overflow-hidden bg-cover bg-no-repeat bg-center lg:bg-[url(/images/hero-bg.png)] z-20"
       >
         <div
-          class="flex z-20 relative mx-auto gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center p-5 py-20 pt-22 md:pt-28 lg:pt-[200px] min-h-dvh md:min-h-fit xl:max-w-[1000px]"
+          class="flex z-20 relative mx-auto gap-5 md:gap-7 lg:gap-10 justify-center flex-col items-start md:items-center p-5 py-20 md:py-10 pt-22 md:pt-28 lg:pt-[200px] min-h-dvh md:min-h-fit xl:max-w-[1000px]"
         >
           <img
             src="/images/ec-left.png"
             alt=""
-            class="absolute left-0 top-0 -z-10 lg:hidden"
+            class="absolute left-0 top-0 -z-10 lg:hidden lg:select-none"
           />
           <img
             src="/images/ec-right.png"
             alt=""
-            class="absolute right-0 bottom-0 -z-10 lg:hidden"
+            class="absolute right-0 bottom-0 -z-10 lg:hidden lg:select-none"
           />
 
           <!-- ACHIEVEMENT   -->
@@ -393,6 +404,132 @@
           </div>
         </div>
       </section>
+
+      <!-- DEMO SECTION -->
+      <section
+        class="px-5 md:pt-20 lg:pt-10 pb-10 md:pb-[60px] lg:pb-[76px] relative before:absolute before:bottom-0 before:left-0 before:-z-10 before:w-full before:h-[65%] before:bg-[#F5F5F5]"
+      >
+        <div class="flex flex-col gap-8 md:gap-16 lg:gap-[70px]">
+          <div
+            class="relative z-10 max-w-[600px] lg:max-w-[900px] mx-auto w-full"
+          >
+            <img src="/images/demo-video.png" alt="" class="relative z-20" />
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-2xl shadow-blue rounded-full z-20"
+            >
+              <img
+                src="/icons/play.png"
+                alt=""
+                class="w-[60px] lg:w-[80px] video-play-button hover:scale-110 transition-all cursor-pointer"
+              />
+            </div>
+
+            <!-- <video
+              src="./public/video/video.mp4"
+              class="absolute z-10 p-[3px] left-0 right-0 top-0 bottom-0 w-full h-full object-cover rounded-[15px]"
+            ></video> -->
+
+            <img
+              src="/images/vector.png"
+              alt=""
+              class="absolute -top-6 -right-5 w-[100px] lg:w-[150px] lg:-top-8 lg:-right-[85px]"
+            />
+          </div>
+
+          <div class="w-full box-border overflow-hidden">
+            <div
+              class="custom-marquee flex md:gap-8 lg:gap-12.5 items-center whitespace-nowrap"
+            >
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-3.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-4.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-5.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-3.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-4.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-5.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-3.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-4.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-5.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-3.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-4.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+              <div class="shrink-0 w-fit flex-grow">
+                <img
+                  src="/public/icons/brand-5.svg"
+                  alt=""
+                  class="w-[85%] h-full lg:w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="pt-[500px]"></div>
     </main>
 
     <script type="module" src="/script.js"></script>

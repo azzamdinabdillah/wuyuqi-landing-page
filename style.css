@@ -126,3 +126,28 @@
 .nav-link {
   @apply before:-bottom-1 before:h-0.5 before:w-[80%] before:rounded-full relative before:absolute before:left-1/2 before:right-0 before:bg-black before:-translate-x-1/2 before:scale-x-0 hover:before:scale-x-100 before:transition-all before:origin-left;
 }
+
+
+/* MARQUEE CUSTOM ANIMATION */
+
+@keyframes custom-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.custom-marquee {
+  animation: custom-marquee 7s linear infinite;
+}
+
+@media screen and (width >= 1024px) {
+  .custom-marquee {
+    animation: custom-marquee 8s linear infinite;
+  }
+  /* .marquee-container-brand .horizontal-marquee-inner {
+    gap: 50px;
+  } */
+}

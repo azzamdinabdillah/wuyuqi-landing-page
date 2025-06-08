@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
     duplicateCount: 0,
   });
 
+  new InfiniteMarquee({
+    element: ".marquee-container-brand",
+    speed: 10000,
+    smoothEdges: true,
+    direction: "left",
+    duplicateCount: 0,
+  });
+
   // FLOATING TESTIMONIAL ANIMATION
   gsap.set(".floating-animation", {
     opacity: 0,
@@ -55,8 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).go();
 
+  // SIDEBAR MOBILE
   document.querySelector(".toggle-navbar").addEventListener("click", () => {
-    document.querySelector(".navbar-mobile").classList.toggle("show");
+    const navbarMobile = document.querySelector(".navbar-mobile");
+    navbarMobile.classList.toggle("show");
+    document.querySelector("body").classList.toggle("overflow-hidden");
 
     // ANIMATION OPEN/CLOSE SIDEBAR MOBILE VERSION
     gsap
@@ -81,5 +92,20 @@ document.addEventListener("DOMContentLoaded", function () {
         width: "70vw",
         duration: 0.3,
       });
+  });
+
+  // VIDEO PLAY
+  document.querySelector(".video-play-button").addEventListener("click", () => {
+    document.querySelector("video").play();
+  });
+
+  // IF NAVBAR ON THE TOP OF THE PAGE
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector("nav");
+    if (window.scrollY <= 0) {
+      navbar.classList.remove("bg-white");
+    } else {
+      navbar.classList.add("bg-white");
+    }
   });
 });
