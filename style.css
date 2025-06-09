@@ -5,7 +5,9 @@
   --color-clifford: #da373d;
   --color-black: #0b0a2f;
   --color-gray: #91909e;
+  --color-gray-e7: #e7e7e7;
   --color-blue: #4232f9;
+  --breakpoint-3xl: 120rem;
 }
 
 * {
@@ -127,7 +129,6 @@
   @apply before:-bottom-1 before:h-0.5 before:w-[80%] before:rounded-full relative before:absolute before:left-1/2 before:right-0 before:bg-black before:-translate-x-1/2 before:scale-x-0 hover:before:scale-x-100 before:transition-all before:origin-left;
 }
 
-
 /* MARQUEE CUSTOM ANIMATION */
 
 @keyframes custom-marquee {
@@ -147,7 +148,43 @@
   .custom-marquee {
     animation: custom-marquee 8s linear infinite;
   }
-  /* .marquee-container-brand .horizontal-marquee-inner {
-    gap: 50px;
-  } */
+}
+
+/* CUSTOM SWITCH CHECKBOX */
+input[type="checkbox"] {
+  appearance: none;
+  width: 60px;
+  height: 32px;
+  padding: 6px 4px;
+  border-radius: 100px;
+  background-color: #f5f5f5;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: aliceblue;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(150%);
+  background-color: #4633fa;
+}
+
+/* ENTERPRISE PRISING GRADIENT */
+.enterprise-gradient {
+  background: linear-gradient(197deg, #4232f9 0%, #f532f9 100%);
 }
