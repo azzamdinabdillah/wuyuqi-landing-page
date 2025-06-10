@@ -3,10 +3,12 @@ import gsap from "gsap";
 import TypeIt from "typeit";
 
 document.addEventListener("DOMContentLoaded", function () {
+  // MARQUEE ANIMATION FOR HERO SECTION
   new InfiniteMarquee({
     element: ".marquee-container",
     speed: 25000,
     smoothEdges: true,
+    pauseOnHover: true,
     direction: "right",
     duplicateCount: 1,
   });
@@ -16,14 +18,28 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 20000,
     smoothEdges: true,
     direction: "left",
+    pauseOnHover: true,
+    duplicateCount: 0,
+  });
+
+  // MARQUEE ANIMATION FOR SUCCESS STORIES SECTION
+  new InfiniteMarquee({
+    element: ".marquee-container-stories",
+    speed: 15000,
+    smoothEdges: true,
+    direction: "left",
+    gap: "20px",
+    pauseOnHover: true,
     duplicateCount: 0,
   });
 
   new InfiniteMarquee({
-    element: ".marquee-container-brand",
-    speed: 10000,
+    element: ".marquee-container-stories-reverse",
+    speed: 15000,
     smoothEdges: true,
-    direction: "left",
+    direction: "right",
+    gap: "20px",
+    pauseOnHover: true,
     duplicateCount: 0,
   });
 

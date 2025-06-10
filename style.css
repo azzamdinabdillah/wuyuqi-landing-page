@@ -148,6 +148,12 @@
   .custom-marquee {
     animation: custom-marquee 8s linear infinite;
   }
+
+  /* MARQUEE GAP IN STORIES SECTION */
+  .marquee-container-stories .horizontal-marquee-inner,
+  .marquee-container-stories-reverse .horizontal-marquee-inner {
+    gap: 30px;
+  }
 }
 
 /* CUSTOM SWITCH CHECKBOX */
