@@ -124,4 +124,21 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("bg-white");
     }
   });
+
+  // ACCORDION FAQ SECTION
+  const accordion = document.querySelectorAll(".accordion");
+  accordion.forEach((acc) => {
+    acc.addEventListener("click", () => {
+      const p = acc.querySelector("p");
+      if (acc.classList.contains("open")) {
+        p.style.height = p.scrollHeight + "px";
+        void p.offsetHeight;
+        p.style.height = "0px";
+        acc.classList.remove("open");
+      } else {
+        p.style.height = p.scrollHeight + "px";
+        acc.classList.add("open");
+      }
+    });
+  });
 });
