@@ -15,8 +15,12 @@
 }
 
 .button-style {
-  @apply before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 overflow-hidden before:w-0 hover:before:w-full before:-z-10 before:transition-all before:duration-400 transition-all relative cursor-pointer py-3 px-6 md:py-3.5 md:px-8 lg:py-4.5 lg:px-7.5 rounded-full flex gap-1.5 lg:gap-2.5 items-center text-sm lg:text-base;
+  @apply transition-all relative cursor-pointer py-3 px-6 md:py-3.5 md:px-8 lg:py-4.5 lg:px-7.5 rounded-full flex gap-1.5 lg:gap-2.5 items-center text-sm lg:text-base;
 }
+
+/* .button-style {
+  @apply before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 overflow-hidden before:w-0 hover:before:w-full before:-z-10 before:transition-all before:duration-400 transition-all relative cursor-pointer py-3 px-6 md:py-3.5 md:px-8 lg:py-4.5 lg:px-7.5 rounded-full flex gap-1.5 lg:gap-2.5 items-center text-sm lg:text-base;
+} */
 
 .text-12 {
   @apply text-[10px] md:text-xs;

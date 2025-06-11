@@ -10,26 +10,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // GENERAL SCRIPT
 
   // FADEIN ANIMATION
-  gsap.fromTo(
-    ".fadein-item",
+  const fadeObjectElement = [
     {
-      opacity: 0,
-      x: -100,
+      parent: ".promotion-fadein-item-wrapper",
+      children: ".promotion-fadein-item",
     },
     {
-      opacity: 1,
-      x: 0,
-      duration: 0.5,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: ".fadein-item-wrapper",
-        start: "top 50%",
+      parent: ".feature-fadein-item-wrapper",
+      children: ".feature-fadein-item",
+    },
+    {
+      parent: ".faq-fadein-item-wrapper",
+      children: ".faq-fadein-item",
+    },
+  ];
+
+  fadeObjectElement.forEach((element) => {
+    gsap.fromTo(
+      element.children,
+      {
+        opacity: 0,
+        x: -100,
       },
-      stagger: {
-        each: 0.2,
-      },
-    }
-  );
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: element.parent,
+          start: "top 70%",
+        },
+        stagger: {
+          each: 0.2,
+        },
+      }
+    );
+  });
 
   // END GENERAL SCRIPT
 
@@ -186,8 +203,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // ACCORDION FAQ SECTION
   const accordion = document.querySelectorAll(".accordion");
   accordion.forEach((acc) => {
+    const p = acc.querySelector("p");
     acc.addEventListener("click", () => {
-      const p = acc.querySelector("p");
       if (acc.classList.contains("open")) {
         p.style.height = p.scrollHeight + "px";
         void p.offsetHeight;
